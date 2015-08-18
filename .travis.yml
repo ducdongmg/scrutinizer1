@@ -10,9 +10,7 @@ matrix:
     - php: 5.4
 
 before_script:
-  - /home/travis/.phpenv/versions/5.3/bin/composer self-update
-  - /home/travis/.phpenv/versions/5.4/bin/composer self-update
-  - /home/travis/.phpenv/versions/hhvm/bin/composer self-update
+  - composer self-update
   - travis_retry composer self-update
   - travis_retry composer install --no-interaction --prefer-source
 
